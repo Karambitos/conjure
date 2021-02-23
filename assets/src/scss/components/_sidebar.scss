@@ -1,0 +1,210 @@
+.sidebar {
+    position: relative;
+    margin-left: auto;
+    background: $black;
+	width: 100%;
+	max-width: 500px;
+    @include respond-to('desktop') {
+        max-width: 300px;
+    }
+    @include respond-to('tablet_s') {
+        max-width: 200px;
+    }
+    @include respond-to('tablet_m') {
+        display: none;
+    }
+}
+
+.sidebar-wrapper-inner{
+    margin: 50px 90px;
+    color: $white;
+    
+    @include respond-to('desktop') {
+        margin: 40px;
+    }
+
+    @include respond-to('tablet_s') {
+        margin: 15px;
+    }
+    
+    .text,
+    .quote,
+    .lable{
+        font-size: 17px;
+        line-height: 167%;
+            
+        @include respond-to('max_width') {
+            font-size: 12px;
+        }
+
+        @include respond-to('tablet_s') {
+            font-size: 15px;
+        }
+    }
+    .text{
+        margin-bottom: 15px;
+        font-weight: 500;
+    
+    }
+
+    .text-space-md {
+        margin-bottom: 32px;
+        @include respond-to('desktop') {
+            margin-bottom: 20px;
+        }
+    }
+
+    .quote{
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    
+    .lable{
+        font-weight: 400;
+        opacity: 0.75;
+    }
+    
+}
+
+.sidebar-wrapper-inner-subtitle, .sidebar-wrapper-inner-title{
+	font-weight: 700;
+    line-height: 107%;
+	text-transform: uppercase;
+	color: $white;
+}
+.sidebar-wrapper-inner-subtitle {
+	font-size: 17px;
+	
+    @media (min-width: 1920px) {
+        font-size: 30px;
+    }
+}
+
+.sidebar-wrapper-inner-title {
+	font-size: 28px;
+	
+    @media (min-width: 1920px) {
+        font-size: 48px;
+    }
+}
+.sidebar-title-box{
+    margin-bottom: 24px;
+}
+
+.sidebar-title-box--border{
+    border-bottom: 1px solid #3C3C3C;
+    padding-bottom: 40px;
+    margin-bottom: 45px;
+}
+
+// md title (case studies)
+.sidebar-wrapper-inner-title-md {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+// sidebar with bottom link
+
+.sidebar-with-bottom-link {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.sidebar-menu{
+    margin: 0;
+}
+
+.sidebar-menu-item{
+    margin-bottom: 30px;
+
+    @include respond-to('tablet') {
+        margin-bottom: 15px;
+    }
+}
+
+.sidebar-menu-item-link {
+	color: $primary;
+	text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 167%;
+
+    &:hover,
+    &:focus{
+        color: $white;
+    }
+
+    @include respond-to('tablet') {
+        font-size: 19px;
+    }
+}
+.logo-container {
+    margin: auto;
+    padding: 65px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #848484;
+    &-no-auto-space {
+        margin: 0;
+    }
+}
+
+.logo-no-space {
+    margin: 0;
+}
+
+.arrow-icon-cont {
+    margin-top: 48px;
+    @include respond-to('tablet_m') {
+        margin-top: 5px;
+    }
+}
+
+
+.sidebar-title-box-regular {
+    margin-bottom: 34px;
+    transition: 0.2s ease;
+    @include respond-to('phone') {
+        margin-bottom: 85px;
+    }
+}
+a.sidebar-title-box-regular{
+    &:hover * {
+        color: $primary;
+    }
+    &:hover .arrow-svg path{
+        fill: $primary;
+    }
+}
+
+.slide-content-sm-link {
+    display: none;
+    @include respond-to('tablet_m') {
+        display: block;
+        margin-bottom: 85px;
+    }
+}
+
+
+.sidebar-grey {
+    background: rgba($light-grey-aside, 0.8);
+}
+.sidebar-with-bottom-titles {
+    display: flex;
+    flex-direction: column;
+    @include respond-to('desktop') {
+        max-width: 300px;
+    }
+    @include respond-to('tablet_s') {
+        max-width: 200px;
+    }
+    @include respond-to('tablet_m') {
+        display: none;
+    }
+}
+.place-elemnts-bottom {
+    margin-top: auto;
+}

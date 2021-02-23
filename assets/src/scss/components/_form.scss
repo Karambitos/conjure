@@ -1,0 +1,192 @@
+.form{
+    display: flex;
+    z-index: 2;
+    width: 100%;
+           
+    @include respond-to('desktop') {
+        padding: 20px 0;
+    }
+    @include respond-to('tablet_m') {
+        margin: 0;
+        padding: 80px 0 0;
+    }
+    @include respond-to('phone_s') {
+        padding: 50px 0;
+    }
+
+    &-wrapper{
+        display: flex;
+        color: $white;
+        justify-content: space-between;
+        margin: auto 120px;
+        width: 100%;
+        height: auto;
+        padding: 80px 0;
+    
+        @include respond-to('desktop') {
+            margin: auto 60px;
+        }
+        @include respond-to('medium') {
+            flex-wrap: wrap;
+            margin: auto 20px;
+        }
+        @include respond-to('tablet_m') {
+            padding: 40px 0;
+        }
+    }
+    
+    .modal-input > span{
+        width: 427px;
+
+        @include respond-to('large') {
+            width: 380px;
+        }
+
+        @include respond-to('medium') {
+            width: 100%;
+        }
+    }
+    &-box{
+        @include respond-to('medium') {
+            width: 100%;
+        }
+
+        @include respond-to('tablet_m') {
+            margin-bottom: 40px;
+        }
+    }
+    &-info{
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 167%;
+
+        @include respond-to('large') {
+            margin-right: 10px;
+        }
+
+        @include respond-to('medium') {
+            margin-right: 0;
+            margin-top: 30px;
+            order: 2;
+        }
+
+        @include respond-to('tablet_m') {
+            // display: none;
+        }
+
+        p{
+            font-size: 17px;
+            line-height: 167%;
+            font-weight: 400;
+            margin-bottom: 23px;
+        }
+        
+        li{
+            margin-bottom: 23px;
+        }
+
+    }
+    
+    &-info--title,
+    &--title{
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 107%;
+        text-transform: uppercase;
+        margin-bottom: 33px;
+    }
+    
+    form{
+        margin: 0 0 50px 0;
+        position: relative;
+
+        @include respond-to('tablet_m') {
+            margin: auto;
+        }
+    }
+    
+    input{
+        margin-bottom: 25px;
+        padding: 10px;
+    }
+    input,
+    textarea{
+        width: 100%;
+    
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 167%;
+        
+        background: $black;
+        color: $white;
+        border: none;
+        border-bottom: 2px solid $borderForm;
+        border-right: 2px solid $borderForm;
+        
+    }
+    input:placeholder{
+        color: $white;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 167%;
+    }
+    
+    textarea{
+        box-sizing: border-box;
+        height: 22vh;
+        padding: 10px;
+        resize: vertical;
+        margin-bottom: 25px;
+        @include respond-to('tablet_m') {
+            height: 10vh;
+        }
+    }
+    
+    button{
+        @include animate (all);
+        cursor: pointer;
+        background-color: $primary;
+        color: $white;
+
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 167%;
+        padding: 15px 20px;
+        border: none;
+        outline: none;
+
+        &:hover,
+        &:focus {
+            @include animate (all);
+            background-color: $white;
+            color: $primary;
+        }
+    }
+
+    .wpcf7-form-control-wrap {
+
+        .wpcf7-not-valid-tip {
+            position: absolute;
+            color: $primary;
+            top: -20px
+        }
+
+    }
+
+    .wpcf7 form .wpcf7-response-output {
+        position: absolute;
+        // bottom: -30px;
+        margin: 20px 0 0;
+        top: 100%;
+
+    }
+
+    .wpcf7 form.invalid .wpcf7-response-output,
+    .wpcf7 form.unaccepted .wpcf7-response-output{
+        border-color: $primary;
+    }
+}
+
+
+
+

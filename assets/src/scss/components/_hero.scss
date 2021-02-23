@@ -1,0 +1,58 @@
+.video {
+    video {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        object-position: 50% 0%;
+        &::-webkit-media-controls {
+            display: none;
+        }
+    }
+}
+
+.logo-containerRef{
+    z-index: 999;
+    position: absolute;
+    top: 67px;
+    right: 46px;
+    margin: auto;
+    padding: 0;
+    display: block;
+    border: none;
+
+    @include respond-to('tablet') {
+        width: 30%;
+    }
+    @include respond-to('tablet_m') {
+        display: none;
+    }
+}
+
+.mouse {
+    width: 8px;
+    height: 60px;
+    background: rgba(201, 201, 201, 0.4);
+    border-radius: 38px;
+    position: absolute;
+    pointer-events: none;
+    bottom: 10%;
+    right: 50%;
+    display: block;
+    z-index: 2;
+    overflow: hidden;
+
+    &>span {
+        position: absolute;
+        display: block;
+        width: 7.14px;
+        height: 25.71px;
+        background: #FFFFFF;
+        border-radius: 38px;
+        animation: aniMouse 3s ease-in infinite;
+    }
+
+    &-move {
+        display: none;
+    }
+}
+

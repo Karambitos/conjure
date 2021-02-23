@@ -1,0 +1,95 @@
+.content-image-overlay{
+    position: absolute;
+    display: flex;
+    z-index: -1;
+    height: 100%;
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    @include respond-to('tablet_m') {
+        display: none;
+    }
+}
+.content-image-overlay--mobile{
+    @extend .content-image-overlay;
+    display: none;
+
+    @include respond-to('tablet_m') {
+        display: flex;
+    }
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.content-wrapper--box {
+    padding: 80px 100px 80px 255px;
+    margin: auto 0;
+    z-index: 1;
+    color: $white;
+
+
+    @include respond-to('tablet_m') {
+            // padding: 120px 20px 40px;
+            // padding-left: 0;
+            padding: 0;
+            margin: 0; 
+    }
+
+    @include respond-to('phone_s') {
+        // padding: 40px 0;
+        // padding-left: 0;
+    }
+
+
+    &-text{
+        margin-bottom: 60px;
+
+        @include respond-to('tablet_m') {
+            padding: 0 20px;
+            display: none;
+        }
+    }
+
+    &-text--subtitle{
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 43px;
+
+        @include respond-to('medium') {
+           font-size: 28px;
+        }
+    }
+
+    &-text--title{
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 67px;
+        font-size: 55px;
+
+        @include respond-to('medium') {
+            font-size: 40px;
+        }
+    }
+
+    &-img{
+        img{
+            width: 35vw;
+        }
+        @include respond-to('tablet_m') {
+            padding: 20px 20px 0;
+            margin: auto;
+            img{
+                width: 80vw;
+                margin: auto;
+            }
+        }
+        @include respond-to('small') {
+            display: none;
+        }
+    }
+}

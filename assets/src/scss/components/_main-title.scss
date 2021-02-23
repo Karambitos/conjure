@@ -1,0 +1,65 @@
+.page-title{
+    z-index: 999;
+    width: 100%;
+    text-align: center;
+    padding-left: 155px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    color: $white;
+    
+    @include respond-to('tablet_s') {
+        padding-left: 100px;
+    }
+    @include respond-to('tablet_m') {
+        padding: 10px;
+    }
+    
+    .title{
+        font-size: 130px;
+        font-weight: 500;
+        line-height: 84%;
+        justify-content: center;
+        display: flex;
+        text-transform: uppercase;
+
+        @include respond-to('tablet') {
+            font-size: 90px;
+        }
+
+        @include respond-to('tablet_s') {
+            font-size: 70px;
+        }
+
+        @include respond-to('phone_s') {
+            font-size: 45px;
+        }
+    }
+    .sub-title{
+        font-size: 50px;
+        line-height: 84%;
+        text-transform: uppercase;
+
+        @include respond-to('phone_s') {
+            font-size: 20px;
+        }
+    }
+
+    .sub-title--text{
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 100%;
+        text-transform: uppercase;
+    }
+    
+    .sub-title,
+    .sub-title--text {
+        text-align: center;
+        margin-top: 40px;
+        @include respond-to('phone_s') {
+            margin-top: 15px;
+        }
+    }
+
+}

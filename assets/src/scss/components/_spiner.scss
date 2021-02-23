@@ -1,0 +1,94 @@
+.spinner-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.spinner {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 30px;
+    width: 48px;
+    margin: auto;
+
+    @include respond-to('tablet_m') {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0 60px;
+        margin: 0 0 0 auto;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid $border;
+    }
+    @include respond-to('phone_s') {
+        padding: 0 30px;
+    }
+
+    .spinner-line {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: absolute;
+        height: 4px;
+        width: 48px;
+        background-color: white;
+
+        @include respond-to('phone_s') {
+            height: 2px;
+            width: 20px;
+        }
+    }
+    .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 10px;
+        @include respond-to('phone_s') {
+            margin-top: 5px;
+        }
+    }
+    .diagonal.part-1 {
+        position: relative;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        float: left;
+    }
+    .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 10px;
+        @include respond-to('phone_s') {
+            margin-top: 5px;
+        }
+    }
+    .spinner-line.active.horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        opacity: 0;
+        margin-top: 0;
+    }
+    .spinner-line.active.diagonal.part-1 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(135deg);
+        margin-top: 6px;
+    }
+    .spinner-line.active.diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(-135deg);
+        margin-top: -7px;
+        @include respond-to('phone_s') {
+            margin-top: -4px;
+        }
+    }
+}
+
+

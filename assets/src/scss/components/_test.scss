@@ -1,0 +1,61 @@
+//!HERO
+.content-inner {
+    padding: 0 32px 0 100px;
+    z-index: 1;
+    display: flex;
+    position: relative;
+
+    @include respond-to('tablet_m') {
+        padding: 90px 20px;
+    }
+
+    .case-studies-logo {
+        @include respond-to('phone') {
+            width: 160px;
+        }
+    }
+    
+    .case-studies-titles {
+        z-index: 2;
+        align-self: center;
+        color: #fff;
+        line-height: normal;
+        font-size: 36px;
+    }
+
+    .case-studies-img-container {
+        margin-bottom: 100px;
+
+        @include respond-to('desktop') {
+            margin-bottom: 32px;
+        }
+    }
+
+    .case-studies-titles {
+        z-index: 2;
+        align-self: center;
+        color: $white;
+        line-height: normal;
+        font-size: 36px;
+
+        .case-studies-subtitle {
+            font-weight: normal;
+            padding-bottom: 5px;
+            font-size: 36px;
+        }
+
+        .case-studies-title {
+            font-weight: bold;
+        }
+
+        .case-studies-subtitle,
+        .case-studies-title {
+            text-transform: uppercase;
+
+            @include respond-to('phone') {
+                font-size: 28px;
+            }
+        }
+    }
+}
+

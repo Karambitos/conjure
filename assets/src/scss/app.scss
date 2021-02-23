@@ -1,0 +1,53 @@
+// variables
+@import "./vars";
+// content normalize css
+@import "./content/normalize";
+
+// icomoon
+@import './vendors/icomoon';
+
+// typography
+@import "./typo";
+
+// typography
+@import "./simplebar";
+
+// grid
+@import "./grids";
+// mixins
+@import "./mixins/mixins";
+
+// modal?
+@import "./modals";
+
+//main
+@import "./main";
+
+//fullpage
+@import "./fullpage";
+
+//components
+@import "./components/animation";
+
+@import "./components/cards";
+@import "./components/sidebar";
+@import "./components/nav";
+@import "./components/spiner";
+@import "./components/hero";
+@import "./components/main-title";
+@import "./components/clients-logo";
+@import "./components/three-images";
+@import "./components/three-images-mobile";
+@import "./components/form";
+@import "./components/scroll-indicator";
+@import "./components/title-mobile";
+@import "./components/approach";
+@import "./components/case-studies";
+@import "./components/test";
+
+
+
+
+@import "./components/safari";
+
+

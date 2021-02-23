@@ -1,0 +1,231 @@
+$navBar: 407px;
+$spinerBox: 155px;
+$white: #fff;
+$black: #000;
+$primary: #00DBF9;
+$border: #6A7389;
+$borderForm: #9F9F9F;
+$light-grey-aside: #151515;
+$card-text-color: #636363;
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    @include animate (all);
+    font-family: $montserrat;
+    background: $black;
+    height: 100vh;
+    overflow: hidden;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    a {
+        @include animate (all);
+        color: $white;
+
+        &:hover,
+        &:focus {
+            @include animate (all);
+            color: $primary ;
+        }
+    }
+
+    a.colorRef{
+        @include animate (all);
+        color: $primary;
+
+        &:hover,
+        &:focus {
+            @include animate (all);
+            color: $white;
+        }
+    }
+
+    .title-mobile--ref.alineLeft,
+    .title-mobile--ref.alineLeft>p,
+    .title-mobile--ref.alineLeft>div,
+    .title-mobile--ref.alineLeft>div>p {
+        text-align: left;
+    }
+
+    &.page-template-case-studies-cards {
+        height: 100%;
+        overflow: visible;
+    }
+}
+
+section {
+    transform: translate3d(0px, 0px, 0px);
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+section.oversize {
+    height: auto;
+    overflow: scroll;
+}
+
+section.section-sticky{
+    .bottom-link-section{
+        padding-top: 0;
+    }
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
+.content{
+    position: relative;
+    height: inherit;
+
+    &-wrapper{
+        margin-left: $spinerBox;
+        display: flex;
+        height: 100%;
+        min-height: 100vh;
+
+        @include respond-to('tablet_s') {
+            margin-left: 100px;
+        }
+
+        @include respond-to('tablet_m') {
+            margin: auto;
+            flex-direction: column;
+        }
+    }
+    
+    .overlay {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.44);
+        pointer-events: none;
+    }
+
+    .full-screan {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.44);
+            pointer-events: none;
+        }
+    }
+
+    .blur-dark {
+        -webkit-backdrop-filter: blur(40px);
+        backdrop-filter: blur(40px);
+        filter: blur(40px);
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.44);
+        }
+    }
+
+    .gradient {
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../../img/case-studies-hero-overlay.svg');
+            pointer-events: none;
+            background-size: cover;
+
+            @include respond-to('tablet_m') {
+                background: rgba(0, 0, 0, 0.6);
+            }
+
+        }
+    }
+
+    .top-gradient {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: auto;
+            background-position: top top;
+            background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 21%, rgba(0, 0, 0, 0) 70%);
+        }
+    }
+}
+
+.marginRef{
+    margin: 0;
+}
+
+li.disabled{
+    display:none;
+}
+
+.insights .case-studies-outer{
+    overflow: scroll;
+}
+
+
+// ::-webkit-scrollbar {
+//     min-width: 12px;
+//     width: 12px;
+//     max-width: 12px;
+//     min-height: 12px;
+//     height: 12px;
+//     max-height: 12px;
+//     background: red;
+//     box-shadow: inset 0px 50px 0px rgba(82, 179, 217, 0.9), inset 0px -52px 0px #fafafa;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//     background: red;
+//     border: none;
+//     border-radius: 100px;
+//     border: solid 33px red;
+//     box-shadow: inset 0px 0px 3px red;
+// }
+
+// ::-webkit-scrollbar-thumb:hover {
+//     background: red;
+//     box-shadow: inset 0px 0px 3px red;
+// }
+
+// ::-webkit-scrollbar-thumb:active {
+//     background: red;
+//     box-shadow: inset 0px 0px 3px red;
+// }
+
+// ::-webkit-scrollbar-button {
+//     display: block;
+//     height: 26px;
+// }
+

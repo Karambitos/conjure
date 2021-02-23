@@ -1,0 +1,16 @@
+{
+    "name": "crispwp/rst",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Luke Kortunov",
+            "email": "ikortunov@crispwp.com"
+        }, {
+            "name": "Serhii Khomenko",
+            "email": "skhomenko@crispwp.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "RST\\" : "src/" }
+    }
+}

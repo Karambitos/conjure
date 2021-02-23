@@ -1,0 +1,30 @@
+.safari{
+
+    .mouse{
+        bottom: 20%;
+    }
+
+    .client-logo {
+        @include respond-to('phone_s') {
+            padding-bottom: 40px;
+        }
+    }
+
+    .form-wrapper{
+        @media (max-width: 768px) {
+            padding-bottom: 80px;
+        }
+    }
+    
+    .posts.blury-posts {
+        padding-bottom: 140px;
+    }
+
+    .content-inner-sm-blockquote .sidebar-title-box-regular{
+        @media (max-width: 768px) {
+            margin-bottom: 140px;
+        }
+    }
+
+}
+

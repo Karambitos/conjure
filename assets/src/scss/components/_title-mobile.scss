@@ -1,0 +1,117 @@
+.title-mobile{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 40px;
+
+    text-align: center;
+    color: $white;
+
+    @include respond-to('tablet_m') {
+    padding: 0 20px;
+    display: block;
+    }
+
+    &-box{
+        margin-bottom: 24px;
+        @include respond-to('phone_s') {
+            margin-bottom: 15px;
+        }
+    }
+
+    &-box--main-title {
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 107%;
+        text-transform: uppercase;
+        color: $white;
+
+        @include respond-to('phone_s') {
+            font-size: 40px;
+        }
+    }
+
+    &--text{
+        text-align: center;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 167%;
+        color: $white;
+
+        @include respond-to('phone_s') {
+            font-size: 17px;
+        }
+    }
+
+    &--mix {
+        font-size: 25px;
+        font-weight: 600;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+}
+
+.title-mobile--ref {
+    display: none;
+
+    .title-mobile-box {
+        &--main-title {
+            text-align: center;
+        }
+    }
+
+    @include respond-to('tablet_m') {
+        display: block;
+        width: 100%;
+        margin: 40px auto 0;
+        padding: 80px 20px 0;
+    }
+
+    @include respond-to('phone_s') {
+        padding: 30px 20px 0;
+    }
+
+
+    .title-mobile-box--main-title,
+    .title-mobile-box--main-subtitle,
+    .title-mobile--text {
+        color: $white;
+        // text-align: inherit;
+    }
+
+    .title-mobile-box--mix {
+        font-size: 25px;
+        font-weight: 600;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .title-mobile-box--main-subtitle {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 43px;
+
+        @include respond-to('medium') {
+            font-size: 28px;
+        }
+    }
+
+    .title-mobile-box--main-title {
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 67px;
+        font-size: 55px;
+
+        @include respond-to('medium') {
+            font-size: 40px;
+        }
+    }
+}
+
+
+

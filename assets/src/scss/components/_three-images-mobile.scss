@@ -1,0 +1,16 @@
+.images-box--mobile{
+    display: none;
+    @include respond-to('tablet_m') {
+        display: block;
+    }
+
+    .card-img{
+        height: 100vh;
+
+        img{
+            max-height: 100vh;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
